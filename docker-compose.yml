@@ -1,8 +1,10 @@
+version: '2.4'
 services:
   diiis-na-server:
     build:
       context: .
       dockerfile: Dockerfile
+    image: ghcr.io/whit3str/diis-na-server:latest
     container_name: diiis-na-server
     volumes:
      - ./src/DiIiS-NA/config.ini:/app/config.ini
