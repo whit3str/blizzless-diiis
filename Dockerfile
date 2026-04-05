@@ -18,6 +18,9 @@ WORKDIR /app
 # Copy the published application from the build stage
 COPY --from=build /app/publish .
 
+# Copy the config file
+COPY src/DiIiS-NA/config.ini /app/config.ini
+
 # Expose the port your application is running on (if needed)
 EXPOSE 1345 1119 83 2001 9800 9100
 # Start the application
